@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardwell Software LLC</title>
+<meta name="description" content="Cardwell Software LLC — small, focused apps, built carefully.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafcfc;
+    --fg: #1a2526;
+    --muted: #55696b;
+    --accent: #0e7a80;
+    --card: #ffffff;
+    --rule: #d7e2e3;
+    --teal: #37b6be;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101b1c;
+      --fg: #e3edee;
+      --muted: #9db3b5;
+      --accent: #5fc7cd;
+      --card: #162425;
+      --rule: #29393b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 4rem 1.25rem 3rem; }
+  header { text-align: center; margin-bottom: 3.5rem; }
+  .dots { margin-bottom: 1.1rem; }
+  .dot { display: inline-block; border-radius: 50%; background: var(--teal); vertical-align: middle; }
+  h1 { font-size: 2rem; margin: 0 0 0.4rem; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); margin: 0; }
+  h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin: 0 0 1rem;
+  }
+  .app-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 1.4rem 1.5rem;
+    transition: border-color 0.15s ease;
+  }
+  .app-card:hover { border-color: var(--teal); }
+  .app-card .row { display: flex; align-items: center; gap: 1rem; }
+  .app-icon {
+    width: 52px; height: 52px; flex: none;
+    border-radius: 13px;
+    background: var(--teal);
+    display: grid; place-items: center;
+  }
+  .app-icon svg { display: block; }
+  .app-name { font-weight: 600; font-size: 1.15rem; margin: 0; }
+  .app-desc { color: var(--muted); font-size: 0.95rem; margin: 0.15rem 0 0; }
+  .badge {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+  .contact { margin-top: 3rem; text-align: center; color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="dots" aria-hidden="true">
+      <span class="dot" style="width:10px;height:10px;opacity:.55"></span>
+      <span class="dot" style="width:14px;height:14px;opacity:.8;margin-left:7px"></span>
+      <span class="dot" style="width:18px;height:18px;margin-left:7px"></span>
+    </div>
+    <h1>Cardwell Software</h1>
+    <p class="tagline">Small, focused apps — built carefully.</p>
+  </header>
+
+  <section>
+    <h2>Apps</h2>
+    <a class="app-card" href="travelcues/">
+      <div class="row">
+        <div class="app-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="38" cy="66" r="9" fill="#fff" opacity="0.7"/>
+            <circle cx="55" cy="53" r="12" fill="#fff" opacity="0.9"/>
+            <circle cx="74" cy="40" r="15" fill="#fff"/>
+          </svg>
+        </div>
+        <div>
+          <p class="app-name">Travel Cues</p>
+          <p class="app-desc">Calming motion cues for reading in the car — an Android
+          wellness app.</p>
+        </div>
+      </div>
+      <span class="badge">Coming soon to Google Play →</span>
+    </a>
+  </section>
+
+  <p class="contact">
+    Questions or support:
+    <a href="mailto:travelcues.support@gmail.com">travelcues.support@gmail.com</a>
+  </p>
+
+  <footer>© 2026 Cardwell Software LLC</footer>
+</main>
+</body>
+</html>
