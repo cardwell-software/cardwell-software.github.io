@@ -57,6 +57,7 @@
     padding: 1.4rem 1.5rem;
     transition: border-color 0.15s ease;
   }
+  .app-card + .app-card { margin-top: 1rem; }
   .app-card:hover { border-color: var(--teal); }
   .app-card .row { display: flex; align-items: center; gap: 1rem; }
   .app-icon {
@@ -117,11 +118,34 @@
       </div>
       <span class="badge">Coming soon to Google Play →</span>
     </a>
+
+    <a class="app-card" href="unpack/">
+      <div class="row">
+        <!-- Slate, not teal: Travel Cues owns the teal, and the crate was moved off #2F6F6F for
+             exactly this reason - two teal apps from one developer is anti-differentiation. -->
+        <div class="app-icon" style="background:#38455c" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+            <rect x="31.5" y="51.75" width="45" height="25.3125" rx="4.21875" fill="#fff"/>
+            <g transform="rotate(16 76.5 48.9375)">
+              <rect x="31.5" y="40.5" width="45" height="8.4375" rx="2.8125" fill="#fff"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <p class="app-name">Unpack</p>
+          <p class="app-desc">Opens ZIP, RAR, 7z and more, and shows what's using your
+          storage — an Android file utility.</p>
+        </div>
+      </div>
+      <span class="badge">Coming soon to Google Play →</span>
+    </a>
   </section>
 
   <p class="contact">
     Questions or support:
-    <a href="mailto:travelcues.support@gmail.com">travelcues.support@gmail.com</a>
+    <a href="mailto:cardwellsoftware@gmail.com">cardwellsoftware@gmail.com</a><br>
+    <span style="font-size:0.85rem">Travel Cues:
+    <a href="mailto:travelcues.support@gmail.com">travelcues.support@gmail.com</a></span>
   </p>
 
   <footer>© 2026 Cardwell Software LLC</footer>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unpack — Files &amp; Archives for Android</title>
+<meta name="description" content="Unpack opens ZIP, RAR, 7z and more, and shows what's using your storage. No ads, no internet permission.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafcfc;
+    --fg: #1a2526;
+    --muted: #55696b;
+    --accent: #0e7a80;
+    --card: #ffffff;
+    --rule: #d7e2e3;
+    --slate: #38455c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101b1c;
+      --fg: #e3edee;
+      --muted: #9db3b5;
+      --accent: #5fc7cd;
+      --card: #162425;
+      --rule: #29393b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 3.5rem 1.25rem 3rem; }
+  header { text-align: center; margin-bottom: 3rem; }
+  .icon {
+    width: 84px; height: 84px; border-radius: 21px;
+    background: var(--slate);
+    display: inline-grid; place-items: center;
+    margin-bottom: 1.1rem;
+  }
+  h1 { font-size: 2rem; margin: 0 0 0.4rem; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); margin: 0; }
+  h2 {
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--muted); margin: 2.5rem 0 0.8rem;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--rule);
+    border-radius: 16px; padding: 1.3rem 1.5rem; margin-bottom: 1rem;
+  }
+  .card h3 { margin: 0 0 0.2rem; font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  .badge { display: inline-block; margin-top: 0.4rem; font-size: 0.8rem; color: var(--accent); }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+    text-align: center; color: var(--muted); font-size: 0.85rem;
+  }
+  footer a { margin: 0 0.4rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="icon" aria-hidden="true">
+      <!-- The crate, mid-unpack: the same geometry as the launcher icon, at 1/2 scale of its
+           108-unit viewport. Body and lid, lid turned 16 degrees about its right-hand corner. -->
+      <svg width="54" height="54" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+        <rect x="31.5" y="51.75" width="45" height="25.3125" rx="4.21875" fill="#fff"/>
+        <g transform="rotate(16 76.5 48.9375)">
+          <rect x="31.5" y="40.5" width="45" height="8.4375" rx="2.8125" fill="#fff"/>
+        </g>
+      </svg>
+    </div>
+    <h1>Unpack</h1>
+    <p class="tagline">Archives, opened. Storage, explained.</p>
+  </header>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="card">
+      <h3>Opens what other apps won't</h3>
+      <p>ZIP, RAR, RAR5, 7z, TAR, GZ, BZ2, XZ, ZST, LZ4, ISO, CAB and LHA. Password-protected and
+      AES-encrypted ZIPs. Split archives, reassembled. Archives are detected by their contents, so a
+      renamed download still opens.</p>
+    </div>
+    <div class="card">
+      <h3>Makes ZIPs</h3>
+      <p>Select files or folders and compress them. Free, with no limits and no watermark.</p>
+    </div>
+    <div class="card">
+      <h3>Shows where your space went</h3>
+      <p>What's using space by category, your biggest folders, and the largest files on the device —
+      with an honest account of what Android hides from every file manager.</p>
+    </div>
+    <div class="card">
+      <h3>Finds duplicates safely</h3>
+      <p>Matched by content, not by name, and compared byte for byte before anything is offered for
+      deletion. One copy of each is always kept.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <div class="card">
+      <h3>No internet permission</h3>
+      <p>Not a promise — a permission the app does not have. Android apps without it cannot open a
+      network connection at all, and you can check for yourself in Settings → Apps → Unpack →
+      Permissions. No accounts, no analytics, no ads.</p>
+      <span class="badge"><a href="privacy-policy.html">Read the privacy policy →</a></span>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <a href="privacy-policy.html">Privacy</a>·<a href="terms.html">Terms</a>·<a href="mailto:cardwellsoftware@gmail.com">Contact</a>
+    </p>
+    <p>© 2026 Cardwell Software LLC</p>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unpack — Privacy Policy</title>
+<meta name="description" content="Unpack privacy policy. Unpack has no internet permission and collects nothing.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafcfc;
+    --fg: #1a2526;
+    --muted: #55696b;
+    --accent: #0e7a80;
+    --rule: #d7e2e3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101b1c;
+      --fg: #e3edee;
+      --muted: #9db3b5;
+      --accent: #5fc7cd;
+      --rule: #29393b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 0.25rem; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin: 0 0 2rem; }
+  h2 { font-size: 1.05rem; margin: 1.8rem 0 0.3rem; }
+  p { margin: 0.3rem 0 0; }
+  ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+  li { margin: 0.15rem 0; }
+  a { color: var(--accent); }
+  .disclaimer {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Unpack — Privacy Policy</h1>
+  <p class="updated">Last updated: August 12, 2026</p>
+
+  <p>Unpack is built to work entirely on your device.</p>
+
+  <h2>What we collect: nothing.</h2>
+  <p>Unpack has no accounts, no sign-in, no analytics, no crash reporting, and no
+  advertising SDKs.</p>
+
+  <h2>Unpack cannot reach the internet at all</h2>
+  <p>This is stronger than a promise not to. Unpack does not declare Android's
+  <code>INTERNET</code> permission, and an Android app without that permission cannot open a
+  network connection of any kind — not to us, not to anyone. You can verify this yourself
+  on your own device: open Android Settings, then Apps, then Unpack, then Permissions.</p>
+  <p>The app's build enforces it too. Every build checks the app's complete, final permission
+  list against a fixed set, and fails if anything outside that set appears — including any
+  permission arriving through a third-party library.</p>
+
+  <h2>Files you open</h2>
+  <p>Unpack reads and writes files on your device, which is its entire purpose. Those files
+  are never uploaded, copied off the device, or indexed anywhere, because the app has no way
+  to send anything anywhere.</p>
+
+  <h2>All files access</h2>
+  <p>On Android 11 and later, Unpack may ask for the "All files access" permission. It is
+  never requested on first run, and the app works without it — extracting to your Downloads
+  folder needs no permission at all. It is used for two things: extracting to a folder you
+  choose anywhere on your storage, and measuring what is using space across the whole device.
+  Without it, Android hides other apps' files from Unpack, so a storage measurement would be
+  silently incomplete; Unpack refuses to show one rather than showing a wrong one. You can
+  revoke the permission at any time in system settings.</p>
+
+  <h2>Opening a file in another app</h2>
+  <p>Unpack shows images and plain text itself. For anything else, tapping a file hands it to
+  an app you already have — a video player, a PDF reader, and so on. Once a file is handed to
+  another app, what that app does with it is governed by that app, not by Unpack. This is the
+  one thing the rest of this page does not cover, and we would rather say so plainly.</p>
+
+  <h2>What is stored on your device</h2>
+  <p>Unpack saves three small preferences, and nothing else:</p>
+  <ul>
+    <li>which destination you last extracted to, as a category such as "Downloads" — never a path</li>
+    <li>how you like file lists sorted</li>
+    <li>the date of your last storage scan</li>
+  </ul>
+  <p>No file names, no folder paths, and no passwords are ever written to disk. Passwords you
+  type for encrypted archives are held in memory only and are gone when the app closes.</p>
+
+  <h2>Backups</h2>
+  <p>Android may back up app data to your Google account. Unpack limits this to the three
+  preferences above. Copies of archives you open are explicitly excluded from both cloud
+  backup and device-to-device transfer.</p>
+
+  <h2>Data sharing</h2>
+  <p>We do not share data with anyone, because we do not collect any.</p>
+
+  <h2>Children</h2>
+  <p>Unpack does not collect personal information from anyone, including children.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy ever changes, the updated version will be posted at this URL with a new
+  date.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:cardwellsoftware@gmail.com">cardwellsoftware@gmail.com</a></p>
+
+  <p class="disclaimer">Unpack is published by Cardwell Software LLC. Deleting files is
+  permanent; Unpack asks before deleting anything and always keeps one copy of each set when
+  removing duplicates, but it cannot recover a file once it is gone.</p>
+</main>
+</body>
+</html>
