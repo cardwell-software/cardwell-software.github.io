@@ -58,6 +58,22 @@
   .card p + p { margin-top: 0.5rem; }
   .badge { display: inline-block; margin-top: 0.4rem; font-size: 0.8rem; color: var(--accent); }
   header .badge { margin: 0.9rem 0 0; }
+  .shots {
+    display: flex; gap: 0.75rem;
+    overflow-x: auto; scroll-snap-type: x proximity;
+    padding-bottom: 0.4rem;
+  }
+  .shots figure { flex: 0 0 58%; margin: 0; scroll-snap-align: start; }
+  .shots img {
+    display: block; width: 100%; height: auto;
+    border: 1px solid var(--rule); border-radius: 12px;
+    background: var(--card);
+  }
+  .shots figcaption { margin-top: 0.4rem; color: var(--muted); font-size: 0.8rem; line-height: 1.4; }
+  @media (min-width: 34rem) {
+    .shots { overflow-x: visible; flex-wrap: wrap; }
+    .shots figure { flex: 1 1 30%; }
+  }
   a { color: var(--accent); }
   footer {
     margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
@@ -137,6 +153,42 @@
       <h3>Stop whenever you like</h3>
       <p>The game saves as you play, in the middle of a fight too, so you can put the phone down
       and take the run up again later. It needs no connection to play.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>On the stage</h2>
+    <div class="shots">
+      <figure>
+        <img src="img/house.jpg" width="720" height="1560" loading="lazy"
+             alt="The game's main menu: the title on a placard before a closed red theatre curtain, a row of footlights, and the audience in their seats.">
+        <figcaption>Before the show: the house, from the seats.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/rooms.jpg" width="720" height="1560" loading="lazy"
+             alt="The dressing rooms: three doors in a row, the first open with the lead standing in it, the other two locked, over a board of brass plates for the Encores.">
+        <figcaption>The dressing rooms, and tonight's Encore.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/playbill.jpg" width="720" height="1560" loading="lazy"
+             alt="The map of an act, printed as a theatre playbill: rooms joined by dotted paths that climb the sheet.">
+        <figcaption>The playbill: tonight's route up the Tower.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fight.jpg" width="720" height="1560" loading="lazy"
+             alt="A fight on the stage: two enemies with what each means to do shown over its head, the lead and two skeleton minions below them, and a hand of five cards along the bottom of the screen.">
+        <figcaption>A fight: the cast on the boards, your hand below.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/reward.jpg" width="720" height="1560" loading="lazy"
+             alt="After a fight: three cards stand on the stage under a sign that reads Choose a card.">
+        <figcaption>The reward: one of three.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shop.jpg" width="720" height="1560" loading="lazy"
+             alt="The shop: cards, relics and potions pegged to lines across a red curtain, each with its price in gold.">
+        <figcaption>The Bone Market.</figcaption>
+      </figure>
     </div>
   </section>
 
