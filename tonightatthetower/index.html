@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tonight at the Tower — A One-Thumb Card Game for Android</title>
+<meta name="description" content="Tonight at the Tower is a free deckbuilding card game for Android 11 and newer, played with one thumb on a toy theatre's stage. Three acts, one lead, seven Encores.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafcfc;
+    --fg: #1a2526;
+    --muted: #55696b;
+    --accent: #0e7a80;
+    --card: #ffffff;
+    --rule: #d7e2e3;
+    --night: #3e2a33;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101b1c;
+      --fg: #e3edee;
+      --muted: #9db3b5;
+      --accent: #5fc7cd;
+      --card: #162425;
+      --rule: #29393b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 3.5rem 1.25rem 3rem; }
+  header { text-align: center; margin-bottom: 3rem; }
+  .icon {
+    width: 84px; height: 84px; border-radius: 21px;
+    background: var(--night);
+    display: inline-grid; place-items: center;
+    overflow: hidden;
+    margin-bottom: 1.1rem;
+  }
+  .icon svg { display: block; }
+  h1 { font-size: 2rem; margin: 0 0 0.4rem; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); margin: 0; }
+  h2 {
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--muted); margin: 2.5rem 0 0.8rem;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--rule);
+    border-radius: 16px; padding: 1.3rem 1.5rem; margin-bottom: 1rem;
+  }
+  .card h3 { margin: 0 0 0.2rem; font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  .badge { display: inline-block; margin-top: 0.4rem; font-size: 0.8rem; color: var(--accent); }
+  header .badge { margin: 0.9rem 0 0; }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+    text-align: center; color: var(--muted); font-size: 0.85rem;
+  }
+  footer a { margin: 0 0.4rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="icon" aria-hidden="true">
+      <!-- "Curtain Up", the launcher icon: the house curtains drawn back on the Tower, a flat
+           stood on the boards against the moon, two footlights on the rail. The same geometry as
+           the icon's 432-unit canvas, showing the middle 288 units a launcher shows, without the
+           woodcut's wobble and small cuts. The colours are the game's own inks: night, madder,
+           paper, bruise ink, brass. Not teal and not slate: those are Travel Cues' and Unpack's. -->
+      <svg width="84" height="84" viewBox="72 72 288 288" xmlns="http://www.w3.org/2000/svg">
+        <rect x="72" y="72" width="288" height="288" fill="#3e2a33"/>
+        <circle cx="216" cy="212" r="96" fill="#f2e1bf" stroke="#2d1a2e" stroke-width="12"/>
+        <path d="M272 158A78 78 0 0 1 284 251" fill="none" stroke="#e2cba2" stroke-width="9" stroke-linecap="round"/>
+        <path d="M191 332L198 214H234L241 332Z" fill="#2d1a2e" stroke="#2d1a2e" stroke-width="12" stroke-linejoin="round"/>
+        <path d="M183 218L216 142L249 218Z" fill="#7b3341" stroke="#2d1a2e" stroke-width="12" stroke-linejoin="round"/>
+        <path d="M208 262V242A8 8 0 0 1 224 242V262Z" fill="#f2c74e"/>
+        <g id="tatt-curtain" stroke="#2d1a2e" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M32 -40H192C192 70 150 168 106 246C98 280 112 312 122 342L126 400H32Z" fill="#7b3341" stroke-width="12"/>
+          <path d="M152 -40C152 70 117.6 168 81.5 246M107.6 -40C107.6 70 81.6 168 54.3 246" fill="none" stroke-width="7"/>
+          <path d="M-40 226Q40 256 110 244" fill="none" stroke-width="24"/>
+          <path d="M-40 226Q40 256 110 244" fill="none" stroke="#c39448" stroke-width="11"/>
+          <path d="M97 264H111L116 292L108 288L104 294L100 288L92 292Z" fill="#c39448" stroke-width="8"/>
+          <circle cx="104" cy="258" r="9" fill="#c39448" stroke-width="8"/>
+        </g>
+        <use href="#tatt-curtain" transform="translate(432 0) scale(-1 1)"/>
+        <path d="M32 326H400V400H32Z" fill="#7a5a3e" stroke="#2d1a2e" stroke-width="12"/>
+        <path d="M72 348H360" fill="none" stroke="#2d1a2e" stroke-width="6"/>
+        <g id="tatt-float" stroke="#2d1a2e" stroke-width="8" stroke-linejoin="round">
+          <path d="M160.7 284.6C165.2 291.8 170.6 297.2 169.7 306.2C168.8 322.4 147.2 322.4 146.3 306.2C145.4 296.3 155.3 292.7 160.7 284.6Z" fill="#f2e1bf"/>
+          <path d="M135.5 326A22.5 15.3 0 0 1 180.5 326Z" fill="#c39448"/>
+        </g>
+        <use href="#tatt-float" x="116"/>
+      </svg>
+    </div>
+    <h1>Tonight at the Tower</h1>
+    <p class="tagline">A card game on a paper stage, played with one thumb.</p>
+    <p class="badge">Coming soon to Google Play · for Android 11 and newer</p>
+  </header>
+
+  <section>
+    <h2>The game</h2>
+    <div class="card">
+      <h3>A deck of cards in a toy theatre</h3>
+      <p>A deckbuilding roguelike, staged with woodcut paper puppets behind a curtain and a row of
+      footlights. Each run starts with a small deck. You add cards and relics as you climb the
+      Tower, and when a run ends you start a new one from the first floor.</p>
+    </div>
+    <div class="card">
+      <h3>Played with one thumb</h3>
+      <p>Portrait only, with everything you press placed where a thumb reaches. Drag a card to
+      play it. A setting moves the controls to suit your left hand or your right.</p>
+    </div>
+    <div class="card">
+      <h3>Three acts, with a boss at the end of each</h3>
+      <p>Thirty floors of fights, shops, rests and events, laid out on a playbill that is drawn
+      afresh for every run. There is an interval between the acts.</p>
+    </div>
+    <div class="card">
+      <h3>One lead: the Necromancer</h3>
+      <p>He raises minions that serve for a few turns and then leave the stage, and he wears his
+      enemies down with Curse. He is the only character in the game.</p>
+    </div>
+    <div class="card">
+      <h3>Seven Encores</h3>
+      <p>Win a run and the next Encore opens: the same climb with one more hardship added to all
+      the ones before it. There are seven.</p>
+    </div>
+    <div class="card">
+      <h3>Stop whenever you like</h3>
+      <p>The game saves as you play, in the middle of a fight too, so you can put the phone down
+      and take the run up again later. It needs no connection to play.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What it costs</h2>
+    <div class="card">
+      <h3>Free, with ads you can remove</h3>
+      <p>The game is free. Your first five runs have no ads. After that an ad may show at a break
+      in play: when a boss is beaten, and when a run ends. One purchase through Google Play, made
+      once, removes the ads for good.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <div class="card">
+      <h3>No account, and the detail is your choice</h3>
+      <p>There is no sign-in, and the game never asks for your name, email or contacts. Your
+      progress is kept on your phone, and your phone's own backup can carry it to a new one. Run
+      data, which is the cards you pick and how your fights and runs go, is sent only if you say
+      yes when the game asks after your first run. A small daily count with no identifier in it
+      stays off on a phone whose region is set to the European Economic Area, the United Kingdom
+      or Switzerland unless you switch it on, and is on elsewhere unless you switch it off.
+      Settings has a switch for each. The ads come from Google, whose ad software uses your
+      phone's advertising ID, and in those same countries Google's form asks what you allow
+      before the first ad.</p>
+      <span class="badge"><a href="privacy-policy.html">Read the privacy policy →</a></span>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <a href="privacy-policy.html">Privacy</a>·<a href="terms.html">Terms</a>·<a href="mailto:cardwell.software.llc@gmail.com">Contact</a>
+    </p>
+    <p>© 2026 Cardwell Software LLC</p>
+  </footer>
+</main>
+</body>
+</html>
